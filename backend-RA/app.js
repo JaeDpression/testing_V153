@@ -1,8 +1,10 @@
+// app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const authRoutes = require('./routes/authRoutes'); // Make sure this path is correct
-const bookingRoutes = require('./routes/bookingRoutes'); // Make sure this path is correct
+const authRoutes = require('./routes/authRoutes'); // Ensure this path is correct
+const bookingRoutes = require('./routes/bookingRoutes'); // Ensure this path is correct
+const contactRoutes = require('./routes/contactRoutes'); // Add this if you have a contact route
 
 const app = express();
 
@@ -21,3 +23,6 @@ mongoose.connect('mongodb://localhost:27017/hotel_db', {
 // Routes
 app.use('/api/auth', authRoutes); // Ensure this line is correct
 app.use('/api/book', bookingRoutes); // Ensure this line is correct
+app.use('/api/contact', contactRoutes); // Add this line if you have a contact route
+
+module.exports = app; // Correctly export the app instance

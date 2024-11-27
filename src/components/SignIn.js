@@ -1,3 +1,4 @@
+// src/components/SignIn.js
 import React, { useState } from 'react';
 import './SignIn.css'; // External CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,7 +22,7 @@ const SignIn = () => {
         const response = await fetch('http://localhost:5000/api/signin', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password }),
+          body: JSON.stringify({ email, password }), // Ensure these fields are correct
         });
 
         const data = await response.json();
@@ -33,6 +34,7 @@ const SignIn = () => {
           setError(data.message || 'Login failed. Please try again.');
         }
       } catch (error) {
+        console.error('Fetch error:', error);
         setError('An error occurred. Please try again.');
       }
     }
@@ -59,6 +61,7 @@ const SignIn = () => {
           setError(data.message || 'Sign up failed. Please try again.');
         }
       } catch (error) {
+        console.error('Fetch error:', error);
         setError('An error occurred. Please try again.');
       }
     }
@@ -117,7 +120,7 @@ const SignIn = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password ">Password</label>
               <input 
                 type="password" 
                 id="password" 
@@ -128,17 +131,16 @@ const SignIn = () => {
                 required
               />
             </div>
-
-            <div className="form-actions">
-              <button type="submit" className="signin-button">{isSignUp ? 'Create Account' : 'Sign In'}</button>
-              <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
-            </div>
+            
+            <button type="submit" className="submit-button">
+              {isSignUp ? 'Sign Up' : 'Sign In'}
+            </button>
           </form>
-
+          
           <p>
-            {isSignUp ? 'Already have an account?' : "Don't have an account?"} 
-            <button onClick={() => setIsSignUp(!isSignUp)} className="signin-button">
-              {isSignUp ? 'Sign In' : 'Create an Account'}
+            {isSignUp ? 'Already have an account?' : 'Don’t have an account?'}
+            <button onClick={() => setIsSignUp(!isSignUp)} className="toggle-button">
+              {isSignUp ? 'Sign In' : 'Sign Up'}
             </button>
           </p>
         </div>

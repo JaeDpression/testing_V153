@@ -1,9 +1,9 @@
+// routes/bookingRoutes.js
 const express = require('express');
+const router = express.Router();
 const bookingController = require('../controllers/bookingController');
 
-const router = express.Router();
-
-router.post('/', bookingController.createBooking); // Ensure this line exists
-router.get('/', bookingController.getBookings);
+router.post('/', bookingController.createBooking);
+router.get('/', bookingController.getBookings); // This line is causing the error
 
 module.exports = router;
