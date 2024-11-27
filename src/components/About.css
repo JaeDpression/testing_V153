@@ -1,0 +1,42 @@
+.about-container {
+  background: url('https://i.pinimg.com/originals/6a/ee/ea/6aeeea24e8fd4023a349e354eefa33ed.gif') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.about-hero, .about-story, .about-values, .about-team, .about-philosophy, .about-testimonials {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.transparent-box {
+  background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional for extra depth */
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .transparent-box {
+    padding: 15px;
+  }
+}

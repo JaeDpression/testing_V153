@@ -1,0 +1,97 @@
+.nav-bar {
+  position: fixed; /* Make the nav bar stick to the top edge */
+  top: 0; /* Align it to the top edge */
+  left: 0; /* Align it to the left edge */
+  width: 100%; /* Make it span the full width */
+  height: 70px; /* Set the height of the nav bar */
+  background-color: #ffe0e0; /* Soft pink background */ /* Soft pink background */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; /* Make sure it's on top of other elements */
+}
+
+.nav-sign-in {
+  margin-right: 100px; /* Add some spacing to the right of the sign in button */
+}
+
+.nav-sign-in a {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; /* Reduce font size from 18px to 16px */
+  font-weight: bold;
+  color: #333; /* Dark gray text */
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-sign-in a:hover {
+  background-color: #333; /* Dark gray background */
+  color: #fff; /* White text */
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 100px; /* Add some spacing to the left of R.A Hotel services */
+  margin-right: 20px;
+  text-transform: uppercase; /* Make the text all uppercase */
+  letter-spacing: 2px; /* Add some space between letters */
+}
+
+.nav-bar-bottom {
+  position: fixed; /* Make the nav bar stick to the top edge */
+  top: 70px; /* Align it below the nav bar */
+  left: 0; /* Align it to the left edge */
+  width: 100%; /* Make it span the full width */
+  height: 20px; /* Set the height of the nav bar */
+  background-color: #3a3a3a; /* Black background */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; /* Make sure it's on top of other elements */
+}
+
+.nav-links-bottom {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link-bottom {
+  margin: 0 20px;
+}
+
+.nav-link-bottom a {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; /* Reduce font size from 18px to 16px */
+  font-weight: bold;
+  color: #fff; /* White text */
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-link-bottom a:hover {
+  background-color: #333; /* Dark gray background */
+}
+
+.nav-link-bottom a.active {
+  background-color: #666; /* Dark gray background */
+  cursor: not-allowed;
+}
+
+.content-area {
+  margin-top: 110px !important; /* Create some space between the nav bar and the main content */
+}
