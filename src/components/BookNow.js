@@ -37,7 +37,7 @@ const BookNow = () => {
         setGuests(1);
         setRoomType('single');
       } else {
-        setError(data.message || 'Booking failed. Please try again.');
+        setError(data.error);
       }
     } catch (error) {
       setError('An error occurred. Please try again.');
@@ -82,7 +82,7 @@ const BookNow = () => {
           <input 
             type="number" 
             id="guests" 
-            name="guests" 
+            name="guests" // Corrected this line
             value={guests}
             onChange={(e) => setGuests(Number(e.target.value))} // Convert to number
             min="1" 
@@ -111,7 +111,7 @@ const BookNow = () => {
       </form>
 
       {error && <p className="error-message">{error}</p>}
-      {success && <p className ="success-message">{success}</p>}
+      {success && <p className="success-message">{success}</p>}
     </div>
   );
 };

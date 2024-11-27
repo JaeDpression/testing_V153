@@ -1,4 +1,3 @@
-// src/components/SignIn.js
 import React, { useState } from 'react';
 import './SignIn.css'; // External CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,7 +21,7 @@ const SignIn = () => {
         const response = await fetch('http://localhost:5000/api/signin', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password }), // Ensure these fields are correct
+          body: JSON.stringify({ email, password }),
         });
 
         const data = await response.json();
@@ -31,10 +30,9 @@ const SignIn = () => {
           console.log('Login successful:', data);
           // You can store the token in localStorage or state if needed
         } else {
-          setError(data.message || 'Login failed. Please try again.');
+          setError(data.error);
         }
       } catch (error) {
-        console.error('Fetch error:', error);
         setError('An error occurred. Please try again.');
       }
     }
@@ -58,10 +56,9 @@ const SignIn = () => {
           console.log('Account created:', data);
           setIsSignUp(false); // Close the signup form after creation
         } else {
-          setError(data.message || 'Sign up failed. Please try again.');
+          setError(data.error);
         }
       } catch (error) {
-        console.error('Fetch error:', error);
         setError('An error occurred. Please try again.');
       }
     }
@@ -120,27 +117,28 @@ const SignIn = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="password ">Password</label>
+              <label htmlFor="password">Password</label>
               <input 
                 type="password" 
                 id="password" 
-                name="password" 
+                name=" password" 
                 placeholder="Enter your password" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
-            
-            <button type="submit" className="submit-button">
-              {isSignUp ? 'Sign Up' : 'Sign In'}
-            </button>
+
+            <div className="form-actions">
+              <button type="submit" className="signin-button">{isSignUp ? 'Create Account' : 'Sign In'}</button>
+              <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
+            </div>
           </form>
-          
+
           <p>
-            {isSignUp ? 'Already have an account?' : 'Don’t have an account?'}
-            <button onClick={() => setIsSignUp(!isSignUp)} className="toggle-button">
-              {isSignUp ? 'Sign In' : 'Sign Up'}
+            {isSignUp ? 'Already have an account?' : "Don't have an account?"} 
+            <button onClick={() => setIsSignUp(!isSignUp)} className="signin-button">
+              {isSignUp ? 'Sign In' : 'Create an Account'}
             </button>
           </p>
         </div>
