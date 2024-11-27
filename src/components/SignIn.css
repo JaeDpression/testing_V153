@@ -1,84 +1,85 @@
 /* SignIn Page Styles */
 .signin-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-}
-
-.signin-container h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.signin-container p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-.signin-form .form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.signin-form label {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-}
-
-.signin-form input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.signin-form input:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.form-actions {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.signin-button {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.signin-button:hover {
-  background-color: #0056b3;
-}
-
-.forgot-password-link {
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-}
-
-.forgot-password-link:hover {
-  text-decoration: underline;
-}
-
-.error {
-  color: red;
-  margin-bottom: 20px;
-}
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .signin-container h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .signin-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .signin-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .signin-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .signin-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .signin-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .signin-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .signin-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .forgot-password-link {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 20px;
+  }
+  
