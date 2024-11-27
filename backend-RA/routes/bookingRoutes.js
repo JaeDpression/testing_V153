@@ -1,9 +1,9 @@
-// routes/bookingRoutes.js
 const express = require('express');
-const router = express.Router();
 const bookingController = require('../controllers/bookingController');
 
-router.post('/', bookingController.createBooking);
+const router = express.Router();
+
+router.post('/', bookingController.createBooking); // Ensure this line exists
 router.get('/', bookingController.getBookings);
 
 module.exports = router;
